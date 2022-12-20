@@ -72,9 +72,9 @@ function validaCartao() {
 }
 
 function validaData() {
-    const regex = /^\d{4}[/](0[1-9]|1[012])[/](0[1-9]|[12][0-9]|3[12])$/;
+    const regex = /^(\d{4})[/]((0[1-9]|1[012]))[/]((0[1-9]|[12][0-9]|3[12]))$/;
     if (regex.test(dataValidade.value)) {
-        console.log(dataValidade.value);
+        console.log(dataValidade.value.replace(regex, '$3/$2/$1'));
     } else {
         throw new Error("Data de validade do cartão inválida");
     }
