@@ -9,7 +9,7 @@ const diretor = document.querySelector("#diretor");
 const atores = document.querySelector("#atores");
 const poster = document.querySelector(".poster");
 const sinopse = document.querySelector("#sinopse");
-const apiKey = "c4f07ff4";
+const apiKey = "cc08f823";
 const imgDefault = "./default_image.png";
 
 async function buscaFilme(nomeBusca) {

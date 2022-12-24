@@ -6,13 +6,11 @@
 
 body {
     background-size: 100%;
-
 }
 
 p {
     margin: 5px;
     font-size: 19px;
-
 }
 
 .quadro {
@@ -43,9 +41,10 @@ p {
     margin-right: 25px;
 }
 
+
 /* Informações APP*/
 
-.container_app{
+.container_app {
     text-align: center;
 }
 
@@ -98,7 +97,9 @@ p {
     font-size: 20px;
     color: #ffffff;
     margin-top: 10px;
+    cursor: pointer;
 }
+
 
 /*Informações Filmes*/
 
@@ -111,7 +112,7 @@ p {
     margin-right: 25px;
 }
 
-.titulo{
+.titulo {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 40px;
     margin-top: 5px;
@@ -124,7 +125,6 @@ p {
 .informacoes_parte2 {
     margin-left: 25px;
     margin-right: 25px;
-
 }
 
 .detalhes {

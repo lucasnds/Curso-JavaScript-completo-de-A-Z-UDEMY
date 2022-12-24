@@ -1,0 +1,364 @@
+JavaScript de A a Z:
+
+- 9 tipos:
+
+String
+Number
+Bigint
+Boolean
+undefined
+
+null
+
+object
+function
+________________
+
+- diferença entre var e let:
+let não podemos dar o mesmo nome da variável
+, pois apresentará erro e é o mais correto a
+se fazer, var nos podemos.
+
+- condição com operador ternário:
+(condição) ? operação1(true): operação2(false);
+tem que inicializar e ter cuidado para nao ficar 
+confuso.
+
+_______________________________________________
+
+- functions:
+
+- Declaração x Expressão
+Declaração: sofre hosting , disponível em todo
+código e não são anônimas, ou seja, precisam 
+receber um nome.
+
+const areaQuadrado = function calculaArea(lado){
+let area = lado * lado;
+return area;
+}
+
+ou
+
+const areaQuadrado = function calculaArea(lado){
+return lado * lado;
+}
+
+Expressão: não sofrem hosting, disponível em parte
+do código e podem ser anônimas, ou seja, não 
+precisam receber um nome.
+
+const areaQuadrado = function(lado){
+let area = lado * lado;
+return area;
+}
+
+ou
+
+const areaQuadrado = function(lado){
+return lado * lado;
+}
+___________________________________________
+
+- function seta ou arrowFunction:
+semânticamente possuem a mesma função, entretanto,
+possuem uma sintaxe um pouco diferente, vejamos no 
+exemplo a seguir:
+
+const areaQuadrado = (lado) => {
+let area = lado * lado;
+return area;
+}
+
+ou
+
+const areaQuadrado = (lado) => {
+return lado * lado;
+}
+
+ou
+
+const areaQuadrado = lado => lado * lado;
+obs: Usar apenas para casos simples, pois para
+códigos mais complexos pode ficar ilegível.
+______________________________________________
+
+- Escopos
+Global x Local
+Se refere ao processo de declaração das variáveis
+dentro ou fora de funções, sendo global a parte 
+"fora" de um lanço de repetição, condição ou função
+e local sendo "dentro" de um lanço de repetição, 
+condição ou função.
+______________________________________________
+
+-Parâmetro Rest
+É utilizado quando não sabemos o número determinado
+de parâmetros da função. Sua sintaxe é utilizado
+três pontos antes da declaração. Exemplo:
+
+function exibeNum (...num){
+console.log(num);
+}
+________________________________________________
+
+- Arrays
+
+Métodos:
+
+Métodos adicionais:
+.push() -> quando queremos adicionar elementos ao 
+final do array.
+.unshift() -> quando queremos adicionar elementos ao 
+início do array.
+
+Métodos removedores:
+.pop() -> quando queremos remover o último elemento do
+array.
+.shift() -> quando queremos remover o primeiro elemento do
+array.
+.splice(posição no array, quantidade) -> quando queremos
+ remover uma parte determinada do array.
+
+Métodos buscadores:
+let indice1 = nomeDoArray.indexOf("Uva")
+console.log(nomeDoArray[indice1]);//Uva
+
+Métodos ordenares:
+.sort() -> Orneda o array em ordem crescente.
+.reverse() -> Inverte a ordem do array.
+
+Obs: para ordenar em ordem DECRESCENTE será necessario
+dois métodos .SORT e .REVERSE.
+
+Mais métodos:
+.map() -> Gera um novo array com modificações 
+definidas antes.
+
+.filter() -> Gera um novo array a partir da condição apresentada
+ser true.
+
+.find() -> Obtém o primeiro elemento que satisfaça a condição
+apresentada.
+
+.findIndex() -> Retorno a índice do primeiro elemento que satisfaça
+a condição apresentada.
+
+Objects:
+Métodos de objes
+
+DOM:
+
+Propriedades para percorrer o DOM
+
+document.getElementById('');
+document.getElementByClassName('');
+document.getElementByTagName('');
+document.querySelector('.className')
+
+parentNode:
+acessar elemento Pai e o retorna
+const paleta1 = document.querySelector("#paleta1");
+console.log(paleta1.parentNode); -> retorna o pai
+
+children()
+acessa todos os elementos filhos
+const paletas_div = document.querySelector(".paletas_div");
+console.log(paletas_div.children); -> retorna os filhos
+
+firstElementChildren()
+Retorna o primeiro elemento filho do elemento acessado
+const paletas_div = document.querySelector(".paletas_div");
+console.log(paletas_div.firstElementChildren); -> retorna o primeiro filho
+
+lastElementeChildren()
+Retorna o último elemento filho do elemento acessado
+const paletas_div = document.querySelector(".paletas_div");
+console.log(paletas_div.lastElementChildren); -> retorna o último filho
+
+previousElementSibling() & nextElementSibling()
+Retorna o irmão antecessor & Retorna o irmão sucessor
+const paleta2 = document.querySelector("#paleta2");
+console.log(paleta2.previousElementSibling)-> Retorna paleta1
+console.log(paleta2.nextElementSibling)-> Retorna paleta3
+
+Criando Elementos e Propriedades:
+
+createElement
+Cria elementos mas nao exibe no navegador
+
+insertBefore()
+Adiciona um elemento no começo ou no meio dos elementos filhos
+de determinado elemento
+
+.classlist & .add & .remove
+Lista das classes de um elemento
+const titulo = document.createElement("h1");
+titulo.textContent = "Olá Mundo";
+titulo.classList.add("titulo"); - > assim o elemento criado 
+através do  JS incorpora a classe ".titulo" para que seja 
+estilizado em um eventual css
+
+.removechildren()
+
+Eventos JavaScript:
+onclick="nomeDaFuncao('parametroDaFuncao')"
+ondblclick
+onmousemove
+
+Tipos de eventos:
+Click
+Dblclick -> clique duplo
+Mousemove -> quando o cursor do mouse se move
+Mouseover -> quando o cursos do mouse é movido sobre algum elemento
+Load -> Acontece quando está totalmente carregado
+Scroll -> Rolagem de elementos
+Keydown -> Quando uma tecla é pressinonada
+Keyup -> Quanda a telca é liberada
+
+Eventos de teclado:
+Keydown -> Quando uma tecla é pressinonada
+Keyup -> Quanda a telca é liberada
+Keypress -> Quando a tecla precionada interruptamente
+
+addEventListener() ->manipulador de eventos usado para carregar o evento no próprio 
+arquivo js e evitar problemas.
+
+______________________
+
+Programação assíncrona JavaScript:
+código síncrono e assíncrono 
+
+ -código síncrono ocorre quando uma linha de código é executada apenas
+quando a anterior é finalizada.
+
+ -código assíncrono as instruções podem ser defenidas sem ordem definida 
+
+Callback:
+Callback Hell:
+Dica para evitar callback hell: 
+ - Escrever melhor o código
+ - Escrever o código utilizando boas práticas de programação
+ - Modularizar o código
+ - Dar melhores nomes as funções
+
+
+PROMISES
+
+Usada em situações de encadeamenteo de callbacks
+Promises: É um objeto que representa uma conclusão ou falha eventual
+de uma operação ASSÍNCRONA.
+ - serve para aliviar callback hell
+Tipos de Promises:
+ - Pendente: Estado inicial antes de ser resolvida ou rejeitada
+ - Cumpida: Operação bem-sucedida, promessa resolvida
+ - Rejeitada: Operação falhou, promessa rejeitada
+
+.then
+.catch
+Sua sintaxe:
+
+
+Async/Await
+Async -> Indica que a função possui código asspincrono.
+Await -> Indica um ponto a ser aguardado pleo código.
+
+try{
+	//código
+}catch(){
+	//código
+}
+
+
+
+Expressão Regular (REGEX)
+
+Lógica e sintaxe:
+const stringTest = "Hello World";
+cont regex = /Hello/;
+console.log(regex.test(stringTest)); //True
+
+match e exec
+
+CPF
+const regexCPF =/^[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}$/;
+
+Replace
+Replace faz uma busca na strinf pela correspondência do 
+padrão e substitui por outra string
+string.replace(regexAntigo,regexNovo);
+
+Sua sintaxe:
+const valor = "R$ 1850,99";
+const regexValor = /(R\$) ([0-9]{4})[,]([0-9]{2})/;
+console.log(valor.replace(regexValor,'$ $2.$3'));
+
+OU acessando por grupos:
+
+const valor = "R$ 1850,99";
+const regexValor = /(?<moeda>R\$) (?<inteiro>[0-9]{4})[,](?<centavos>[0-9]{2})/;
+const data = regexValorNome.exec(valor);
+console.log(data.groups.moeda);
+console.log(data.groups.inteiro);
+console.log(data.groups.centavos);
+
+Overview da seção 14 sobre Expressões Regulares:
+Aprendi o que é uma regex.
+ - Que uma linguagem de busca e padrões
+Buscar, Validar e Substituir 
+^ -> Significa o início da expressão regular
+$ -> Significa o fim da expressão regular
++ -> Significa que tem que existir pelo menos 1 caracter daquele determinado padrão
+* ->
+[A-Z][a-z][0-9] -> Intervalos que podem receber
+Métodos:
+.exec
+.match
+.replace
+.test
+__________________________
+
+Seção 15 - Realizando comunicação através de rede utilizando AJAX + HTTP
+AJAX:
+O que é o AJAX? Basicamente ele permite mais interatividade com o usuário
+utilizando requisições HTTP sem ter que recarregar a página por completo.
+HTTP - A linguagem dos navegadores e servidores:
+O que é HTTP? Protocolo de requisição e resposta, utilizado para a conexão entre as páginas
+web e o servidores e api.
+
+Métodos;
+.get -> Usamos o get quando queremos pedir informaçoes ao servidor
+.post
+.put
+.patch
+.delete
+
+HTTP Status Code:
+100 199 - resposta de informações
+200 299 - sucesso
+300 399 - redirecionamento
+400 499 - Erro do cliente
+500     - Erro do servidor
+
+Objeto XMLHttpRequest
+AJAX
+REQUISIÇÃO:
+ - Objeto XMLHttpRequest
+ - Método Open
+ - Método Send
+RESPOSTA:
+ - Tratamento de Erro
+
+Método OPEN:
+Cria uma conexão entre a aplicação e servidor
+httpRequest.open("MÉTODO", "URL", "FLAG")
+
+Método SEND:
+Ativa a conexão e realiza a devida requisição
+O AJAX utiliza o objeto XMLHttpRequest para enviar e receber dados de um servidor
+
+const httpRequest = new XMLHttpRequest();
+
+
+
+
